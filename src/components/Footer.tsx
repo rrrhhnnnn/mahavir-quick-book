@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -48,17 +48,15 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact Us</h4>
             <div className="flex flex-col gap-3">
-              <a href="tel:+919876543210" className="flex items-center gap-3 text-sm text-secondary-foreground/80 hover:text-primary transition-colors">
+              <a href="tel:+919173789788" className="flex items-center gap-3 text-sm text-secondary-foreground/80 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4 text-primary" />
-                +91 98765 43210
+                +91 91737 89788
               </a>
-              <a href="mailto:info@mahavirtravels.com" className="flex items-center gap-3 text-sm text-secondary-foreground/80 hover:text-primary transition-colors">
-                <Mail className="w-4 h-4 text-primary" />
-                info@mahavirtravels.com
-              </a>
+              
               <div className="flex items-start gap-3 text-sm text-secondary-foreground/80">
                 <MapPin className="w-4 h-4 text-primary mt-0.5" />
-                <span>123 Travel Lane, Mumbai,<br />Maharashtra 400001</span>
+                <span>"JAY CHAMUNDA KRUPA", BHARTI NAGAR-1, RAMDEVPEER CHOWK
+                  <br />GANDHIGRAM , RAJKOT</span>
               </div>
             </div>
           </div>

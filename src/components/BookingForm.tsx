@@ -36,12 +36,10 @@ const BookingForm = () => {
       });
       return;
     }
-
-    const phoneNumber = '919876543210'; // Replace with actual WhatsApp number
+    const phoneNumber = '+91 91737 89788'; // Replace with actual WhatsApp number
     const message = `Hi Mahavir Tours and Travels, I want to book a ride from ${source} to ${destination}.`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
     window.open(whatsappUrl, '_blank');
   };
 
