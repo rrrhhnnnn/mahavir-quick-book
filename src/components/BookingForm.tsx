@@ -1,17 +1,32 @@
 import { useState } from 'react';
 import { useLoadScript } from '@react-google-maps/api';
-import { Send, Loader2 } from 'lucide-react';
+import { Send, Loader2, Car } from 'lucide-react';
 import LocationInput from './LocationInput';
 import { toast } from '@/hooks/use-toast';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 const libraries: ("places")[] = ["places"];
 
-// Note: Replace with your actual Google Maps API key
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || '';
+
+const vehicles = [
+  { value: 'swift', label: 'Swift', description: '4 Seater Hatchback' },
+  { value: 'ertiga', label: 'Ertiga', description: '7 Seater MPV' },
+  { value: 'innova', label: 'Innova', description: '7 Seater Premium' },
+  { value: 'urbania', label: 'Urbania', description: '17 Seater Luxury' },
+  { value: 'bus', label: 'Bus', description: '40+ Seater Coach' },
+];
 
 const BookingForm = () => {
   const [source, setSource] = useState('');
   const [destination, setDestination] = useState('');
+  const [vehicle, setVehicle] = useState('');
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: GOOGLE_MAPS_API_KEY,
@@ -36,8 +51,19 @@ const BookingForm = () => {
       });
       return;
     }
-    const phoneNumber = '+91 91737 89788'; // Replace with actual WhatsApp number
-    const message = `Hi Mahavir Tours and Travels, I want to book a ride from ${source} to ${destination}.`;
+
+    if (!vehicle) {
+      toast({
+        title: "Vehicle Required",
+        description: "Please select a vehicle type",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const selectedVehicle = vehicles.find(v => v.value === vehicle);
+    const phoneNumber = '+91 91737 89788';
+    const message = `Hi Mahavir Tours and Travels, I want to book a ${selectedVehicle?.label} ride from ${source} to ${destination}.`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -76,6 +102,27 @@ const BookingForm = () => {
               label="Drop-off Location"
               icon="destination"
             />
+            
+            {/* Vehicle Selection */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-foreground flex items-center gap-2">
+                <Car className="w-4 h-4 text-primary" />
+                Select Vehicle
+              </label>
+              <Select value={vehicle} onValueChange={setVehicle}>
+                <SelectTrigger className="w-full h-12 bg-background border-border">
+                  <SelectValue placeholder="Choose your vehicle" />
+                </SelectTrigger>
+                <SelectContent className="bg-card border-border z-50">
+                  {vehicles.map((v) => (
+                    <SelectItem key={v.value} value={v.value} className="cursor-pointer">
+                      <span className="font-medium">{v.label}</span>
+                      <span className="text-muted-foreground ml-2 text-sm">({v.description})</span>
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
           </>
         ) : (
           <div className="flex items-center justify-center py-8">
