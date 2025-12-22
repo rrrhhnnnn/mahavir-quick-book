@@ -230,3 +230,13 @@
     transform: scale(1);
   }
 }
+
+.linear-swiper .swiper-wrapper {
+  /* This ensures the motion doesn't "jump" or "stutter" */
+  transition-timing-function: linear !important;
+}
+
+/* Optional: Smooth out the shadow and scale on hover */
+.swiper-slide div {
+  transition: all 0.5s ease-in-out;
+}

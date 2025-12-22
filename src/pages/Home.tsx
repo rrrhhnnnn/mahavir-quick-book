@@ -4,8 +4,18 @@ import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import BookingForm from '@/components/BookingForm';
 import heroBg from '@/assets/hero-bg.jpg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import car1 from '@/assets/sl1.jpg';
+import car2 from '@/assets/sl2.jpg';
+import car3 from '@/assets/sl7.jpg';
+import car4 from '@/assets/sl4.jpg';
+import car5 from '@/assets/sl5.jpg';
+import car6 from '@/assets/sl6.jpg';
+import 'swiper/css';
 
 const Home = () => {
+  const sliderImages = [car1, car2, car3, car4, car5, car6];
   const features = [
     {
       icon: Shield,
@@ -75,6 +85,41 @@ const Home = () => {
         </div>
       </section>
 
+
+<section className="py-12 bg-white overflow-hidden">
+  <Swiper
+    modules={[Autoplay]}
+    spaceBetween={20}
+    // Show fewer slides to make each one wider
+    slidesPerView={1.2} 
+    loop={true}
+    speed={6000}
+    autoplay={{
+      delay: 0,
+      disableOnInteraction: false,
+    }}
+    breakpoints={{
+      // On tablets, show 2.5 images
+      768: { slidesPerView: 2.5 },
+      // On desktop, show 3.5 images (makes them much larger than 5 or 6)
+      1024: { slidesPerView: 3.5 },
+    }}
+    className="linear-swiper"
+  >
+    {sliderImages.map((img, index) => (
+      <SwiperSlide key={index}>
+        {/* Increased height to h-64 or h-80 or h-96 */}
+        <div className="h-64 md:h-80 lg:h-[450px] w-full overflow-hidden rounded-2xl shadow-lg">
+          <img 
+            src={img} 
+            alt="Travel Destination" 
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</section>
       {/* Features Section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">

@@ -20,17 +20,22 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">M</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-lg font-display font-bold text-foreground leading-tight">
-                Mahavir Tours
-              </h1>
-              <p className="text-xs text-muted-foreground -mt-1">& Travels</p>
-            </div>
-          </Link>
+          {/* Logo */}
+      <Link to="/" className="flex items-center gap-2">
+        <div className="w-14 h-14 flex items-center justify-center overflow-hidden">
+          <img 
+            src="/src/assets/logo4.jpg" // Path to your image
+            alt="Mahavir Tours Logo" 
+            className="w-full h-full object-contain" 
+          />
+        </div>
+        <div className="hidden sm:block">
+          <h1 className="text-lg font-display font-bold text-foreground leading-tight">
+            Mahavir Tours
+          </h1>
+          <p className="text-xs text-muted-foreground -mt-1">& Travels</p>
+        </div>
+      </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -56,7 +61,7 @@ const Header = () => {
               className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              +91 98765 43210
+              +91 91737 89788
             </a>
           </div>
 
