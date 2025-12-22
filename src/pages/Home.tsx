@@ -40,7 +40,7 @@ const Home = () => {
         <title>Mahavir Tours and Travels - Premium Taxi Service in India</title>
         <meta
           name="description"
-          content="Book reliable and comfortable taxi services with Mahavir Tours and Travels. Swift, Ertiga, Innova, Bus & Tempo available 24/7."
+          content="Book reliable and comfortable taxi services with Mahavir Tours and Travels. Swift, Ertiga, Innova, Bus & Urbania available 24/7."
         />
       </Helmet>
 

@@ -5,8 +5,7 @@ import swiftImg from '@/assets/swift.jpg';
 import ertigaImg from '@/assets/ertiga.jpg';
 import innovaImg from '@/assets/innova.jpg';
 import busImg from '@/assets/bus.jpg';
-import tempoImg from '@/assets/tempo.jpg';
-
+import urbanImg from '../assets/Urbania.jpg';
 const vehicles = [
   {
     name: 'Swift',
@@ -33,10 +32,10 @@ const vehicles = [
     image: busImg,
   },
   {
-    name: 'Tempo Traveller',
+    name: 'Urbania',
     description: 'Cargo & Utility',
     rating: 4.6,
-    image: tempoImg,
+    image: urbanImg,
   },
 ];
 
@@ -47,7 +46,7 @@ const Services = () => {
         <title>Our Fleet - Mahavir Tours and Travels</title>
         <meta
           name="description"
-          content="Explore our premium fleet including Swift, Ertiga, Innova Crysta, Luxury Bus, and Tempo Traveller for all your travel needs."
+          content="Explore our premium fleet including Swift, Ertiga, Innova Crysta, Luxury Bus, and Urbania for all your travel needs."
         />
       </Helmet>
 
