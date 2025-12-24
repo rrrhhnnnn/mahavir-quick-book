@@ -44,12 +44,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Call Us</p>
-                  <p className="font-semibold text-foreground">+91 98765 43210</p>
+                  <p className="font-semibold text-foreground">+91 91737 89788</p>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/919876543210?text=Hi%20Mahavir%20Tours%20and%20Travels"
+                href="https://wa.me/919173789788?text=Hi%20Mahavir%20Tours%20and%20Travels"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-elevated flex items-center gap-4 group"
@@ -83,9 +83,9 @@ const Contact = () => {
                 <div>
                   <p className="text-sm text-muted-foreground">Visit Us</p>
                   <p className="font-semibold text-foreground">
-                    123 Travel Lane, Mumbai,
+                    "JAY CHAMUNDA KRUPA", BHARTI NAGAR-1, RAMDEVPEER CHOWK
                     <br />
-                    Maharashtra 400001
+                    GANDHIGRAM , RAJKOT
                   </p>
                 </div>
               </div>
@@ -125,28 +125,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-display font-bold text-foreground mb-6 text-center">
-              Find Us
-            </h2>
-            <div className="aspect-video bg-card rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1703000000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Mahavir Tours and Travels Location"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
