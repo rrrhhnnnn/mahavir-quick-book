@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
+import logoImg from '../assets/logo4.jpg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +25,7 @@ const Header = () => {
       <Link to="/" className="flex items-center gap-2">
         <div className="w-14 h-14 flex items-center justify-center overflow-hidden">
           <img 
-            src="/src/assets/logo4.jpg" // Path to your image
+            src={logoImg} // Path to your image
             alt="Mahavir Tours Logo" 
             className="w-full h-full object-contain" 
           />
