@@ -6,16 +6,18 @@ import BookingForm from '@/components/BookingForm';
 import heroBg from '@/assets/hero-bg.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import car1 from '@/assets/sl1.jpg';
-import car2 from '@/assets/sl2.jpg';
-import car3 from '@/assets/sl7.jpg';
-import car4 from '@/assets/sl4.jpg';
-import car5 from '@/assets/sl5.jpg';
-import car6 from '@/assets/sl6.jpg';
+import sl1 from '@/assets/sl1.jpeg';
+import sl2 from '@/assets/sl2.jpeg';
+import sl3 from '@/assets/sl3.jpeg';
+import sl4 from '@/assets/sl4.jpeg';
+import sl5 from '@/assets/sl5.jpeg';
+import sl6 from '@/assets/sl6.jpeg';
+import sl7 from '@/assets/sl7.jpeg'; 
+import sl8 from '@/assets/sl8.jpeg';
 import 'swiper/css';
 
 const Home = () => {
-  const sliderImages = [car1, car2, car3, car4, car5, car6];
+  const sliderImages = [sl1, sl2, sl3, sl4, sl5, sl6, sl7, sl8];
   const features = [
     {
       icon: Shield,
