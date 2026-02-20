@@ -39,11 +39,9 @@ const Home = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Mahavir Tours and Travels - Premium Taxi Service in India</title>
-        <meta
-          name="description"
-          content="Book reliable and comfortable taxi services with Mahavir Tours and Travels. Swift, Ertiga, Innova, Bus & Urbania available 24/7."
-        />
+        <title>Mahavir Tours and Travels - Best Taxi & Cab Service in Rajkot, Gujarat</title>
+        <meta name="description" content="Book reliable taxi & cab services in Rajkot with Mahavir Tours and Travels. Swift, Ertiga, Innova Crysta, Bus & Urbania available 24/7. Call +91 91737 89788." />
+        <link rel="canonical" href="https://mahavirtravels.com/" />
       </Helmet>
 
       {/* Hero Section */}

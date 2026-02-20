@@ -13,11 +13,9 @@ const About = () => {
   return (
     <Layout>
       <Helmet>
-        <title>About Us - Mahavir Tours and Travels</title>
-        <meta
-          name="description"
-          content="Learn about Mahavir Tours and Travels - 15+ years of trusted travel services across India with a fleet of premium vehicles."
-        />
+        <title>About Mahavir Tours and Travels - 15+ Years Trusted Taxi Service Rajkot</title>
+        <meta name="description" content="Mahavir Tours and Travels - 15+ years of trusted taxi & travel services in Rajkot, Gujarat. 10,000+ happy customers, 500+ cities covered." />
+        <link rel="canonical" href="https://mahavirtravels.com/about" />
       </Helmet>
 
       {/* Hero */}
