@@ -14,10 +14,21 @@ import sl5 from '@/assets/sl5.jpeg';
 import sl6 from '@/assets/sl6.jpeg';
 import sl7 from '@/assets/sl7.jpeg'; 
 import sl8 from '@/assets/sl8.jpeg';
+import sl9 from '@/assets/sl9.jpeg';
+import sl10 from '@/assets/sl10.jpeg';
+import sl11 from '@/assets/sl11.jpeg';
+import sl12 from '@/assets/sl12.jpeg';
+import sl13 from '@/assets/sl13.jpeg';
+import sl14 from '@/assets/sl14.jpeg';
+import sl15 from '@/assets/sl15.jpeg';
+import sl16 from '@/assets/sl16.jpeg';
+import sl17 from '@/assets/sl17.jpeg';
+import sl18 from '@/assets/sl18.jpeg';
+
 import 'swiper/css';
 
 const Home = () => {
-  const sliderImages = [sl1, sl2, sl3, sl4, sl5, sl6, sl7, sl8];
+  const sliderImages = [sl1, sl2, sl3, sl4, sl5, sl6, sl7, sl8, sl9, sl10, sl11, sl12, sl13, sl14, sl15, sl16, sl17, sl18];
   const features = [
     {
       icon: Shield,
@@ -41,11 +52,11 @@ const Home = () => {
       <Helmet>
         <title>Mahavir Tours and Travels - Best Taxi & Cab Service in Rajkot, Gujarat</title>
         <meta name="description" content="Book reliable taxi & cab services in Rajkot with Mahavir Tours and Travels. Swift, Ertiga, Innova Crysta, Bus & Urbania available 24/7. Call +91 91737 89788." />
-        <link rel="canonical" href="https://mahavirtravels.com/" />
+        <link rel="canonical" href="https://mahavirtravels.in/" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[90vh] flex items-center pt-16 md:pt-20">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroBg})` }}

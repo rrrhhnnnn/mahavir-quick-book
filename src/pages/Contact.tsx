@@ -8,7 +8,7 @@ const Contact = () => {
       <Helmet>
         <title>Contact Mahavir Tours and Travels Rajkot | Call +91 91737 89788</title>
         <meta name="description" content="Contact Mahavir Tours and Travels in Rajkot. Call +91 91737 89788, WhatsApp us, or visit our office at Gandhigram, Rajkot for taxi bookings." />
-        <link rel="canonical" href="https://mahavirtravels.com/contact" />
+        <link rel="canonical" href="https://mahavirtravels.in/contact" />
       </Helmet>
 
       {/* Hero */}

@@ -45,7 +45,7 @@ const Services = () => {
       <Helmet>
         <title>Our Fleet - Swift, Ertiga, Innova Taxi Hire Rajkot | Mahavir Travels</title>
         <meta name="description" content="Hire Swift, Ertiga, Innova Crysta, Luxury Bus & Urbania in Rajkot. Best rates for outstation, local & airport taxi. Book now!" />
-        <link rel="canonical" href="https://mahavirtravels.com/services" />
+        <link rel="canonical" href="https://mahavirtravels.in/services" />
       </Helmet>
 
       {/* Hero */}

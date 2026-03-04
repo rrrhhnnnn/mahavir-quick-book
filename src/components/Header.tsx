@@ -11,6 +11,7 @@ const Header = () => {
     { path: '/', label: 'Home' },
     { path: '/services', label: 'Services' },
     { path: '/about', label: 'About Us' },
+    { path: '/reviews', label: 'Reviews' },
     { path: '/contact', label: 'Contact Us' },
   ];
 
@@ -30,7 +31,7 @@ const Header = () => {
             className="w-full h-full object-contain" 
           />
         </div>
-        <div className="hidden sm:block">
+        <div>
           <h1 className="text-lg font-display font-bold text-foreground leading-tight">
             Mahavir Tours
           </h1>
@@ -58,7 +59,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+919876543210"
+              href="tel:+919173789788"
               className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
@@ -96,7 +97,7 @@ const Header = () => {
               </Link>
             ))}
             <a
-              href="tel:+919876543210"
+              href="tel:+919173789788"
               className="py-3 px-4 flex items-center gap-2 text-sm font-medium text-primary"
             >
               <Phone className="w-4 h-4" />
