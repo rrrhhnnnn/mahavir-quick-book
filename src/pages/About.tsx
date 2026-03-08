@@ -87,20 +87,7 @@ const VisitorCounter = () => {
             </div>
           </div>
 
-          {/* Google Analytics tip for admin */}
-          <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-xl text-sm text-blue-800">
-            <strong>📊 Admin Tip:</strong> For accurate tracking across all devices, connect{' '}
-            <a
-              href="https://analytics.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline font-semibold hover:text-blue-600"
-            >
-              Google Analytics 4
-            </a>{' '}
-            (free). Add your <code className="bg-blue-100 px-1 rounded">GA_MEASUREMENT_ID</code>{' '}
-            to <code className="bg-blue-100 px-1 rounded">index.html</code> and remove this tip.
-          </div>
+          
         </div>
       </div>
     </section>
