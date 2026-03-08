@@ -101,7 +101,7 @@ const Header = () => {
               className="py-3 px-4 flex items-center gap-2 text-sm font-medium text-primary"
             >
               <Phone className="w-4 h-4" />
-              +91 98765 43210
+              +91 91737 89788
             </a>
           </nav>
         </div>
