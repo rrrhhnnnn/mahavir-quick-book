@@ -2,12 +2,8 @@ import { Helmet } from 'react-helmet-async';
 import { Star, ExternalLink, MessageSquarePlus, Quote } from 'lucide-react';
 import Layout from '@/components/Layout';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 🔧 CONFIGURATION — replace these two values with your real Google info
-// ─────────────────────────────────────────────────────────────────────────────
-const GOOGLE_PLACE_ID = 'YOUR_GOOGLE_PLACE_ID'; // e.g. ChIJN1t_tDeuEmsRUsoyG83frY4
-const GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
-// ─────────────────────────────────────────────────────────────────────────────
+const GOOGLE_PLACE_ID = 'CV71p3pG5ZZ6EBM';
+const GOOGLE_REVIEW_URL = 'https://g.page/r/CV71p3pG5ZZ6EBM/review';
 
 // Showcase reviews displayed on the page (manually curated from real reviews)
 const featuredReviews = [
@@ -90,7 +86,7 @@ const Reviews = () => {
           name="description"
           content="Read customer reviews for Mahavir Tours and Travels Rajkot. Rated 4.9/5 by 200+ happy travellers. Share your experience on Google!"
         />
-        <link rel="canonical" href="https://mahavirtravels.in/reviews" />
+        <link rel="canonical" href="https://mahavirtravels.com/reviews" />
       </Helmet>
 
       {/* ── Hero ── */}
