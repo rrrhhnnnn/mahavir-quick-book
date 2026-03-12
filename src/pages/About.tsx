@@ -1,7 +1,14 @@
 import { Helmet } from 'react-helmet-async';
-import { Users, Award, MapPin, Clock, Eye, TrendingUp } from 'lucide-react';
+import { Users, Award, MapPin, Clock, Eye, TrendingUp, AlertCircle } from 'lucide-react';
 import Layout from '@/components/Layout';
 import { useEffect, useState, useRef } from 'react';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 🔧 PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
+// Steps: script.google.com → Deploy → New Deployment → Web App → Copy URL
+// ─────────────────────────────────────────────────────────────────────────────
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby5u36Su0F1ZNzTtOty_mY-XfR47YItKcoAYGDfrwiqWsPdi3rlPLfnSpyBxqlbde52HQ/exec';
+// ─────────────────────────────────────────────────────────────────────────────
 
 // ─── Animated number counter hook ────────────────────────────────────────────
 function useCountUp(target: number, duration = 2000) {
@@ -25,31 +32,50 @@ function useCountUp(target: number, duration = 2000) {
   return count;
 }
 
-// ─── Visitor Counter using localStorage ──────────────────────────────────────
+// ─── Visitor Counter — fetches real data from GA4 via Google Apps Script ─────
 const VisitorCounter = () => {
   const [totalVisitors, setTotalVisitors] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const animatedCount = useCountUp(totalVisitors, 2200);
 
   useEffect(() => {
-    try {
-      const STORAGE_KEY = 'mahavir_visitor_count';
-      const VISITED_KEY = 'mahavir_has_visited';
-
-      const stored = localStorage.getItem(STORAGE_KEY);
-      let count = stored ? parseInt(stored, 10) : 0;
-
-      // Only increment once per browser/device
-      const hasVisited = localStorage.getItem(VISITED_KEY);
-      if (!hasVisited) {
-        count += 1;
-        localStorage.setItem(VISITED_KEY, 'true');
-        localStorage.setItem(STORAGE_KEY, count.toString());
+    if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') {
+      // Fallback to localStorage until Apps Script URL is configured
+      try {
+        const STORAGE_KEY = 'mahavir_visitor_count';
+        const VISITED_KEY = 'mahavir_has_visited';
+        const stored = localStorage.getItem(STORAGE_KEY);
+        let count = stored ? parseInt(stored, 10) : 0;
+        if (!localStorage.getItem(VISITED_KEY)) {
+          count += 1;
+          localStorage.setItem(VISITED_KEY, 'true');
+          localStorage.setItem(STORAGE_KEY, count.toString());
+        }
+        setTotalVisitors(count);
+      } catch {
+        setTotalVisitors(0);
       }
-
-      setTotalVisitors(count);
-    } catch {
-      setTotalVisitors(0);
+      setLoading(false);
+      return;
     }
+
+    // Fetch real visitor count from GA4 via Google Apps Script
+    fetch(APPS_SCRIPT_URL)
+      .then((res) => {
+        if (!res.ok) throw new Error('Network error');
+        return res.json();
+      })
+      .then((data) => {
+        const count = parseInt(data.visitors, 10);
+        if (!isNaN(count) && count > 0) {
+          setTotalVisitors(count);
+        } else {
+          setError(true);
+        }
+      })
+      .catch(() => setError(true))
+      .finally(() => setLoading(false));
   }, []);
 
   const formatNumber = (n: number) =>
@@ -60,6 +86,7 @@ const VisitorCounter = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="card-elevated flex flex-col sm:flex-row items-center gap-6 p-6 md:p-8">
+
             {/* Icon */}
             <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
               <Eye className="w-8 h-8 text-primary" />
@@ -70,24 +97,39 @@ const VisitorCounter = () => {
               <p className="text-sm text-muted-foreground mb-1 uppercase tracking-wider font-medium">
                 Website Visitors
               </p>
-              <div className="text-4xl md:text-5xl font-display font-bold text-foreground leading-none">
-                {formatNumber(animatedCount)}
-              </div>
-              <p className="text-muted-foreground text-sm mt-2">
-                People have explored our website 🎉
-              </p>
+
+              {loading ? (
+                <div className="flex items-center justify-center sm:justify-start gap-2 mt-1">
+                  <div className="w-5 h-5 rounded-full border-2 border-primary border-t-transparent animate-spin" />
+                  <span className="text-muted-foreground text-sm">Loading...</span>
+                </div>
+              ) : error ? (
+                <div className="flex items-center gap-2 text-destructive mt-1">
+                  <AlertCircle className="w-4 h-4" />
+                  <span className="text-sm">Could not load visitor count</span>
+                </div>
+              ) : (
+                <>
+                  <div className="text-4xl md:text-5xl font-display font-bold text-foreground leading-none">
+                    {formatNumber(animatedCount)}
+                  </div>
+                  <p className="text-muted-foreground text-sm mt-2">
+                    People have explored our website 🎉
+                  </p>
+                </>
+              )}
             </div>
 
             {/* Badge */}
-            <div className="flex-shrink-0 text-center">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                <TrendingUp className="w-3.5 h-3.5" />
-                Live Counter
-              </span>
-            </div>
+            {!loading && !error && (
+              <div className="flex-shrink-0 text-center">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-xs font-semibold rounded-full">
+                  <TrendingUp className="w-3.5 h-3.5" />
+                  Live · Google Analytics
+                </span>
+              </div>
+            )}
           </div>
-
-          
         </div>
       </div>
     </section>
