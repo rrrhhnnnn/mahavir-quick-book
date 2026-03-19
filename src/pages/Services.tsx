@@ -87,7 +87,7 @@ const Services = () => {
             Contact us for special packages and group bookings.
           </p>
           <a
-            href="https://wa.me/919173789788?text=Hi%20Mahavir%20Tours%20and%20Travels%2C%20I%20need%20a%20custom%20quote."
+            href="https://wa.me/9109173789788?text=Hi%20Mahavir%20Tours%20and%20Travels%2C%20I%20need%20a%20custom%20quote."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-block"

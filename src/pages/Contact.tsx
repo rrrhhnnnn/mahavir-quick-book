@@ -34,7 +34,7 @@ const Contact = () => {
               </h2>
 
               <a
-                href="tel:+919173789788"
+                href="tel:+9109173789788"
                 className="card-elevated flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -42,12 +42,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Call Us</p>
-                  <p className="font-semibold text-foreground">+91 91737 89788</p>
+                  <p className="font-semibold text-foreground">+91 091737 89788</p>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/919173789788?text=Hi%20Mahavir%20Tours%20and%20Travels"
+                href="https://wa.me/9109173789788?text=Hi%20Mahavir%20Tours%20and%20Travels"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-elevated flex items-center gap-4 group"
