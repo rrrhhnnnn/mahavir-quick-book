@@ -62,7 +62,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="mailto:info@mahavirtravels.com"
+                href="mailto:mahavirtoursandtravelers55@gmail.com"
                 className="card-elevated flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -70,7 +70,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email Us</p>
-                  <p className="font-semibold text-foreground">info@mahavirtravels.com</p>
+                  <p className="font-semibold text-foreground">mahavirtoursandtravelers55@gmail.com</p>
                 </div>
               </a>
 
