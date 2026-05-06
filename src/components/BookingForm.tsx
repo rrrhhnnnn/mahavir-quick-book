@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Input } from '@/components/ui/input';
+import ClockTimePicker from './ClockTimePicker';
 import { cn } from '@/lib/utils';
 
 const libraries: ("places")[] = ["places"];
