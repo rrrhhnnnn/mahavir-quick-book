@@ -89,7 +89,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="lg:pl-8" style={{ animationDelay: '0.2s' }}>
+            <div className="lg:pl-8 lg:-mt-20 xl:-mt-28" style={{ animationDelay: '0.2s' }}>
               <BookingForm />
             </div>
           </div>
