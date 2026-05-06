@@ -178,27 +178,8 @@ const BookingForm = () => {
                       {time ? time : <span>Pick a time</span>}
                     </Button>
                   </PopoverTrigger>
-                  <PopoverContent className="w-48 p-2 bg-card border-border z-50" align="start">
-                    <div className="max-h-64 overflow-y-auto grid grid-cols-2 gap-1">
-                      {Array.from({ length: 48 }, (_, i) => {
-                        const h = Math.floor(i / 2).toString().padStart(2, '0');
-                        const m = i % 2 === 0 ? '00' : '30';
-                        const t = `${h}:${m}`;
-                        return (
-                          <button
-                            key={t}
-                            type="button"
-                            onClick={() => setTime(t)}
-                            className={cn(
-                              "text-sm py-1.5 px-2 rounded hover:bg-accent hover:text-accent-foreground transition-colors",
-                              time === t && "bg-primary text-primary-foreground hover:bg-primary"
-                            )}
-                          >
-                            {t}
-                          </button>
-                        );
-                      })}
-                    </div>
+                  <PopoverContent className="w-auto p-0 bg-card border-border z-50" align="start">
+                    <ClockTimePicker value={time} onChange={setTime} />
                   </PopoverContent>
                 </Popover>
               </div>
