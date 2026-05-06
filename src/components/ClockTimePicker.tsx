@@ -13,7 +13,7 @@ const parseValue = (v: string) => {
   const [hStr, mStr] = v.split(':');
   const h = parseInt(hStr, 10);
   const m = parseInt(mStr, 10);
-  const period = h >= 12 ? 'PM' : 'AM';
+  const period: 'AM' | 'PM' = h >= 12 ? 'PM' : 'AM';
   let h12 = h % 12;
   if (h12 === 0) h12 = 12;
   return { h12, m, period };
