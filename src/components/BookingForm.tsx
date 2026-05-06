@@ -164,12 +164,42 @@ const BookingForm = () => {
                   <Clock className="w-4 h-4 text-primary" />
                   Pickup Time
                 </label>
-                <Input
-                  type="time"
-                  value={time}
-                  onChange={(e) => setTime(e.target.value)}
-                  className="h-12 bg-background border-border"
-                />
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className={cn(
+                        "w-full h-12 justify-start text-left font-normal bg-background border-border",
+                        !time && "text-muted-foreground"
+                      )}
+                    >
+                      <Clock className="mr-2 h-4 w-4" />
+                      {time ? time : <span>Pick a time</span>}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-48 p-2 bg-card border-border z-50" align="start">
+                    <div className="max-h-64 overflow-y-auto grid grid-cols-2 gap-1">
+                      {Array.from({ length: 48 }, (_, i) => {
+                        const h = Math.floor(i / 2).toString().padStart(2, '0');
+                        const m = i % 2 === 0 ? '00' : '30';
+                        const t = `${h}:${m}`;
+                        return (
+                          <button
+                            key={t}
+                            type="button"
+                            onClick={() => setTime(t)}
+                            className={cn(
+                              "text-sm py-1.5 px-2 rounded hover:bg-accent hover:text-accent-foreground transition-colors",
+                              time === t && "bg-primary text-primary-foreground hover:bg-primary"
+                            )}
+                          >
+                            {t}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </PopoverContent>
+                </Popover>
               </div>
             </div>
           </>
