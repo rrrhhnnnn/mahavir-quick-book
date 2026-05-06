@@ -169,11 +169,6 @@ const ClockTimePicker = ({ value, onChange, onClose }: ClockTimePickerProps) => 
         })}
       </div>
 
-      <div className="flex justify-end gap-2 mt-4">
-        <Button variant="ghost" size="sm" onClick={onClose}>
-          Done
-        </Button>
-      </div>
     </div>
   );
 };
