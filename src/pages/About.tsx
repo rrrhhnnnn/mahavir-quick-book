@@ -40,7 +40,7 @@ const VisitorCounter = () => {
   const animatedCount = useCountUp(totalVisitors, 2200);
 
   useEffect(() => {
-    if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === '') {
+    if (!APPS_SCRIPT_URL || (APPS_SCRIPT_URL as string) === '') {
       // Fallback to localStorage until Apps Script URL is configured
       try {
         const STORAGE_KEY = 'mahavir_visitor_count';

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLoadScript } from '@react-google-maps/api';
-import { Send, Loader2, Car } from 'lucide-react';
+import { Send, Loader2, Car, CalendarIcon, Clock } from 'lucide-react';
+import { format } from 'date-fns';
 import LocationInput from './LocationInput';
 import { toast } from '@/hooks/use-toast';
 import {
@@ -10,6 +11,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
 
 const libraries: ("places")[] = ["places"];
 
@@ -27,6 +33,8 @@ const BookingForm = () => {
   const [source, setSource] = useState('');
   const [destination, setDestination] = useState('');
   const [vehicle, setVehicle] = useState('');
+  const [date, setDate] = useState<Date | undefined>();
+  const [time, setTime] = useState('');
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: GOOGLE_MAPS_API_KEY,
@@ -35,35 +43,29 @@ const BookingForm = () => {
 
   const handleBookNow = () => {
     if (!source.trim()) {
-      toast({
-        title: "Source Required",
-        description: "Please enter your pickup location",
-        variant: "destructive",
-      });
+      toast({ title: "Source Required", description: "Please enter your pickup location", variant: "destructive" });
       return;
     }
-
     if (!destination.trim()) {
-      toast({
-        title: "Destination Required",
-        description: "Please enter your drop-off location",
-        variant: "destructive",
-      });
+      toast({ title: "Destination Required", description: "Please enter your drop-off location", variant: "destructive" });
       return;
     }
-
     if (!vehicle) {
-      toast({
-        title: "Vehicle Required",
-        description: "Please select a vehicle type",
-        variant: "destructive",
-      });
+      toast({ title: "Vehicle Required", description: "Please select a vehicle type", variant: "destructive" });
+      return;
+    }
+    if (!date) {
+      toast({ title: "Date Required", description: "Please select a pickup date", variant: "destructive" });
+      return;
+    }
+    if (!time) {
+      toast({ title: "Time Required", description: "Please select a pickup time", variant: "destructive" });
       return;
     }
 
     const selectedVehicle = vehicles.find(v => v.value === vehicle);
     const phoneNumber = '+919173789788';
-    const message = `Hi Mahavir Tours and Travels, I want to book a ${selectedVehicle?.label} ride from ${source} to ${destination}.`;
+    const message = `Hi Mahavir Tours and Travels, I want to book a ${selectedVehicle?.label} ride from ${source} to ${destination} on ${format(date, 'PPP')} at ${time}.`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -122,6 +124,53 @@ const BookingForm = () => {
                   ))}
                 </SelectContent>
               </Select>
+            </div>
+
+            {/* Date & Time */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-foreground flex items-center gap-2">
+                  <CalendarIcon className="w-4 h-4 text-primary" />
+                  Pickup Date
+                </label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className={cn(
+                        "w-full h-12 justify-start text-left font-normal bg-background border-border",
+                        !date && "text-muted-foreground"
+                      )}
+                    >
+                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      {date ? format(date, 'PPP') : <span>Pick a date</span>}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0 bg-card border-border z-50" align="start">
+                    <Calendar
+                      mode="single"
+                      selected={date}
+                      onSelect={setDate}
+                      disabled={(d) => d < new Date(new Date().setHours(0, 0, 0, 0))}
+                      initialFocus
+                      className={cn("p-3 pointer-events-auto")}
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-foreground flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-primary" />
+                  Pickup Time
+                </label>
+                <Input
+                  type="time"
+                  value={time}
+                  onChange={(e) => setTime(e.target.value)}
+                  className="h-12 bg-background border-border"
+                />
+              </div>
             </div>
           </>
         ) : (
