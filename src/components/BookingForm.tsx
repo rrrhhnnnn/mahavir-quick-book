@@ -23,8 +23,8 @@ const libraries: ("places")[] = ["places"];
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || '';
 
 const vehicles = [
-  { value: 'swift', label: 'Swift', description: '4 Seater Hatchback' },
-  { value: 'ertiga', label: 'Ertiga', description: '7 Seater MPV' },
+  { value: 'swift', label: 'Swift Dzire', description: '4 Seater' },
+  { value: 'ertiga', label: 'Ertiga', description: '6 Seater MPV' },
   { value: 'innova', label: 'Innova', description: '7 Seater Premium' },
   { value: 'urbania', label: 'Urbania', description: '17 Seater Luxury' },
   { value: 'bus', label: 'Bus', description: '40+ Seater Coach' },
