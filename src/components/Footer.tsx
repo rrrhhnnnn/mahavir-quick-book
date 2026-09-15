@@ -35,6 +35,9 @@ const Footer = () => {
               <Link to="/services" className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors">
                 Our Fleet
               </Link>
+              <Link to="/routes" className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors">
+                Airport & Gujarat Routes
+              </Link>
               <Link to="/about" className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors">
                 About Us
               </Link>
