@@ -23,6 +23,20 @@ const cityRoutes = [
   { title: 'Rajkot to All Gujarat Taxi Service', desc: 'Rajkot to all Gujarat taxi service available for Vadodara, Surat, Bhuj, Diu, Junagadh, Statue of Unity and more.' },
 ];
 
+const moreServices = [
+  { title: 'Nearby Taxi Service', desc: 'Looking for a nearby taxi service in Rajkot? We pick you up from your doorstep, office or hotel within minutes.' },
+  { title: 'Rajkot Cab Taxi Service', desc: 'Reliable Rajkot cab taxi service for local city rides, shopping trips, railway station drops and daily commutes.' },
+  { title: 'Hirasar Cab Taxi Service', desc: 'Hirasar cab taxi service with meet-and-greet pickup at Rajkot International Airport arrivals.' },
+  { title: 'Lauret Taxi Service Rajkot Ahmedabad', desc: 'Comfortable Lauret taxi service between Rajkot and Ahmedabad for business travellers and families.' },
+  { title: 'Low Budget Taxi Service', desc: 'Affordable low budget taxi service without compromising on safety or cleanliness. Get the best fare in Rajkot.' },
+  { title: 'Hirasar Airport Taxi Service', desc: 'Round-the-clock Hirasar Airport taxi service with flight tracking and free waiting time.' },
+  { title: 'Best Cab Booking', desc: 'The best cab booking experience in Rajkot — instant WhatsApp confirmation, transparent rates and verified drivers.' },
+  { title: 'Booking Now', desc: 'Booking now is easy. Send your pickup and drop details on WhatsApp and get a confirmed cab in minutes.' },
+  { title: 'Fast Booking Taxi Service', desc: 'Fast booking taxi service for urgent airport transfers, last-minute outstation trips and emergency travel.' },
+  { title: 'Genuine Cab Service', desc: 'A genuine cab service with licensed vehicles, polite drivers and no hidden charges — trusted by thousands in Gujarat.' },
+  { title: 'Parcel Deliver Taxi Service', desc: 'Parcel deliver taxi service to send packages, documents and luggage safely across Rajkot and Gujarat.' },
+];
+
 const faqs = [
   {
     q: 'Which is the best taxi service in Rajkot for airport pickup and drop?',
