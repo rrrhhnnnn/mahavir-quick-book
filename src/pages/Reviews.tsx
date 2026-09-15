@@ -218,7 +218,7 @@ const Reviews = () => {
           {/* See all on Google */}
           <div className="text-center mt-10">
             <a
-              href="https://share.google/ABEsc9p1VyOSIJdsr"
+              href="https://www.google.com/maps/search/?api=1&query=Mahavir+Tours+and+Travels+Rajkot+Gujarat"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-flex items-center gap-2"
