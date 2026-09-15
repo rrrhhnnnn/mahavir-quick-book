@@ -218,7 +218,7 @@ const Reviews = () => {
           {/* See all on Google */}
           <div className="text-center mt-10">
             <a
-              href={`https://search.google.com/local/reviews?placeid=${GOOGLE_PLACE_ID}`}
+              href="https://share.google/ABEsc9p1VyOSIJdsr"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-flex items-center gap-2"
