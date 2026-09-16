@@ -76,6 +76,10 @@ const RoutesPage = () => {
           content="Best taxi services from Hirasar Rajkot International Airport to Dwarka, Somnath, Jamnagar & Ahmedabad. Premium airport pickup drop and Rajkot to all Gujarat taxi service. Call +91 91737 89788."
         />
         <link rel="canonical" href="https://mahavirtravels.in/routes" />
+        <meta
+          name="keywords"
+          content="nearby taxi service, rajkot cab taxi service, hirasar cab taxi service, lauret taxi service rajkot ahmedabad, low budget taxi service, hirasar airport taxi service, best cab booking, booking now, fast booking taxi service, genuine cab service, parcel deliver taxi service, best taxi services, premium taxi service, airport pickup drop, rajkot to all gujarat taxi service, hirasar airport to rajkot taxi service, rajkot to hirasar airport taxi service, rajkot to ahmedabad taxi, ahmedabad to rajkot taxi, hirasar airport to dwarka taxi service, hirasar airport to somnath taxi service, dwarka to somnath taxi service, somnath to rajkot taxi service, rajkot to dwarka taxi service, somnath to dwarka taxi service, rajkot to all gujarat taxi service available, hirasar airport to all gujarat taxi service, best cab services hirasar rajkot international airport, premium taxi service hirasar rajkot international airport to all gujarat, hirasar airport to jamnagar taxi service, jamnagar to hirasar rajkot international airport taxi service, all gujarat taxi service"
+        />
         <meta property="og:title" content="Hirasar Airport Taxi & All Gujarat Taxi Service | Rajkot Cabs" />
         <meta property="og:description" content="Premium taxi service from Hirasar Rajkot International Airport to all Gujarat. Airport pickup drop, Dwarka, Somnath, Jamnagar and Ahmedabad routes." />
         <meta property="og:url" content="/routes" />
@@ -149,6 +153,26 @@ const RoutesPage = () => {
               <article key={r.title} className="card-elevated">
                 <h3 className="text-lg font-display font-bold text-foreground mb-2">{r.title}</h3>
                 <p className="text-sm text-muted-foreground">{r.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* More services (keyword cards) */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-3 mb-8">
+            <Star className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+              More Taxi & Cab Services in Rajkot
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {moreServices.map((s) => (
+              <article key={s.title} className="card-elevated">
+                <h3 className="text-lg font-display font-bold text-foreground mb-2">{s.title}</h3>
+                <p className="text-sm text-muted-foreground">{s.desc}</p>
               </article>
             ))}
           </div>
