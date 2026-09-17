@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Shield, Clock, ThumbsUp } from 'lucide-react';
+import { ArrowRight, Shield, Clock, ThumbsUp, Plane } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import BookingForm from '@/components/BookingForm';
@@ -29,6 +29,35 @@ import 'swiper/css';
 
 const Home = () => {
   const sliderImages = [sl1, sl2, sl3, sl4, sl5, sl6, sl7, sl8, sl9, sl10, sl11, sl12, sl13, sl14, sl15, sl16, sl17, sl18];
+
+  const routeGroups = [
+    {
+      source: 'Hirasar Airport',
+      title: 'From Hirasar Airport (Rajkot International Airport)',
+      destinations: ['Rajkot City', 'Jamnagar', 'Moti Khavdi', 'Jamkhambhaliya', 'Dwarka', 'Porbandar', 'Somnath', 'Keshod', 'Jetpur', 'Gondal', 'Bhuj', 'Gadhibham', 'Ahmedabad', 'Junagadh', 'Kodinar'],
+    },
+    {
+      source: 'Rajkot',
+      title: 'From Rajkot',
+      destinations: ['Hirasar Airport', 'Jamnagar', 'Moti Khavdi', 'Jamkhambhaliya', 'Dwarka', 'Porbandar', 'Somnath', 'Keshod', 'Jetpur', 'Gondal', 'Bhuj', 'Gadhibham', 'Ahmedabad', 'Gandhinagar', 'Mehsana', 'Bhavnagar', 'Palitana'],
+    },
+    {
+      source: 'Ahmedabad',
+      title: 'From Ahmedabad',
+      destinations: ['Rajkot', 'Jamnagar', 'Dwarka', 'Somnath', 'Junagadh', 'Keshod', 'Porbandar'],
+    },
+    {
+      source: 'Jamnagar',
+      title: 'From Jamnagar',
+      destinations: ['Dwarka', 'Rajkot', 'Hirasar Airport', 'Somnath', 'Junagadh', 'Keshod', 'Gandhinagar', 'Ahmedabad', 'Bhuj', 'Gadhibham'],
+    },
+  ];
+
+  const whatsappRouteLink = (source: string, destination: string) =>
+    `https://wa.me/919173789788?text=${encodeURIComponent(
+      `Hi Mahavir Tours and Travels, I want to book a ride from ${source} to ${destination}.`
+    )}`;
+
   const features = [
     {
       icon: Shield,
@@ -131,6 +160,62 @@ const Home = () => {
     ))}
   </Swiper>
 </section>
+
+      {/* Popular Routes Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+              <Plane className="w-4 h-4" />
+              Airport & Outstation Transfers
+            </span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+              Popular Taxi Routes
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              One-way and round-trip taxi service across Gujarat. Tap any route to
+              get an instant fare on WhatsApp.
+            </p>
+          </div>
+
+          <div className="grid gap-10">
+            {routeGroups.map((group) => (
+              <div key={group.title}>
+                <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-5 flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-primary rounded-full inline-block" />
+                  {group.title}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {group.destinations.map((destination) => (
+                    <a
+                      key={`${group.source}-${destination}`}
+                      href={whatsappRouteLink(group.source, destination)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card-elevated group flex items-center justify-between gap-3 py-4 px-5"
+                    >
+                      <div className="min-w-0">
+                        <p className="font-medium text-foreground truncate">
+                          {group.source === 'Hirasar Airport' ? 'Hirasar Airport' : group.source}
+                          {' → '}
+                          {destination}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Taxi service from {group.source} to {destination}
+                        </p>
+                      </div>
+                      <span className="shrink-0 text-primary transition-transform duration-200 group-hover:translate-x-1">
+                        <ArrowRight className="w-5 h-5" />
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">

@@ -9,7 +9,6 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Reviews from "./pages/Reviews";
-import RoutesPage from "./pages/RoutesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,7 +26,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/reviews" element={<Reviews />} />
-            <Route path="/routes" element={<RoutesPage />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
