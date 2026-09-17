@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Shield, Clock, ThumbsUp } from 'lucide-react';
+import { ArrowRight, Shield, Clock, ThumbsUp, Plane } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import BookingForm from '@/components/BookingForm';
@@ -29,6 +29,35 @@ import 'swiper/css';
 
 const Home = () => {
   const sliderImages = [sl1, sl2, sl3, sl4, sl5, sl6, sl7, sl8, sl9, sl10, sl11, sl12, sl13, sl14, sl15, sl16, sl17, sl18];
+
+  const routeGroups = [
+    {
+      source: 'Hirasar Airport',
+      title: 'From Hirasar Airport (Rajkot International Airport)',
+      destinations: ['Rajkot City', 'Jamnagar', 'Moti Khavdi', 'Jamkhambhaliya', 'Dwarka', 'Porbandar', 'Somnath', 'Keshod', 'Jetpur', 'Gondal', 'Bhuj', 'Gadhibham', 'Ahmedabad', 'Junagadh', 'Kodinar'],
+    },
+    {
+      source: 'Rajkot',
+      title: 'From Rajkot',
+      destinations: ['Hirasar Airport', 'Jamnagar', 'Moti Khavdi', 'Jamkhambhaliya', 'Dwarka', 'Porbandar', 'Somnath', 'Keshod', 'Jetpur', 'Gondal', 'Bhuj', 'Gadhibham', 'Ahmedabad', 'Gandhinagar', 'Mehsana', 'Bhavnagar', 'Palitana'],
+    },
+    {
+      source: 'Ahmedabad',
+      title: 'From Ahmedabad',
+      destinations: ['Rajkot', 'Jamnagar', 'Dwarka', 'Somnath', 'Junagadh', 'Keshod', 'Porbandar'],
+    },
+    {
+      source: 'Jamnagar',
+      title: 'From Jamnagar',
+      destinations: ['Dwarka', 'Rajkot', 'Hirasar Airport', 'Somnath', 'Junagadh', 'Keshod', 'Gandhinagar', 'Ahmedabad', 'Bhuj', 'Gadhibham'],
+    },
+  ];
+
+  const whatsappRouteLink = (source: string, destination: string) =>
+    `https://wa.me/919173789788?text=${encodeURIComponent(
+      `Hi Mahavir Tours and Travels, I want to book a ride from ${source} to ${destination}.`
+    )}`;
+
   const features = [
     {
       icon: Shield,
