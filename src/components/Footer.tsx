@@ -16,7 +16,7 @@ const Footer = () => {
                 <h3 className="text-lg font-display font-bold leading-tight">
                   Mahavir Taxi
                 </h3>
-                <p className="text-xs text-secondary-foreground/70 -mt-1">& Travels</p>
+                <p className="text-xs text-secondary-foreground/70 -mt-1">Rajkot, Gujarat</p>
               </div>
             </div>
             <p className="text-sm text-secondary-foreground/80 max-w-xs">

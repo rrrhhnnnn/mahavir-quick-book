@@ -36,7 +36,7 @@ const Header = () => {
           <h1 className="text-lg font-display font-bold text-foreground leading-tight">
             Mahavir Taxi
           </h1>
-          <p className="text-xs text-muted-foreground -mt-1">& Travels</p>
+          <p className="text-xs text-muted-foreground -mt-1">Rajkot, Gujarat</p>
         </div>
       </Link>
 
