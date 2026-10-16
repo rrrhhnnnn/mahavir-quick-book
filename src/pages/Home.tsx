@@ -257,7 +257,7 @@ const Home = () => {
           </h2>
           <p className="text-secondary-foreground/80 max-w-2xl mx-auto mb-8">
             Book your ride now and experience hassle-free travel with Mahavir
-            Tours and Travels. We're just a WhatsApp message away!
+            Taxi. We're just a WhatsApp message away!
           </p>
           <Link to="/services" className="btn-primary inline-flex items-center gap-2">
             Explore Our Fleet

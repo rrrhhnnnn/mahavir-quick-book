@@ -47,7 +47,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="https://wa.me/919173789788?text=Hi%20Mahavir%20Tours%20and%20Travels"
+                href="https://wa.me/919173789788?text=Hi%20Mahavir%20Taxi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-elevated flex items-center gap-4 group"
