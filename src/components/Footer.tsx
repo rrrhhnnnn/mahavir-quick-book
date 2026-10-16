@@ -14,7 +14,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-lg font-display font-bold leading-tight">
-                  Mahavir Tours
+                  Mahavir Taxi
                 </h3>
                 <p className="text-xs text-secondary-foreground/70 -mt-1">& Travels</p>
               </div>
@@ -68,7 +68,7 @@ const Footer = () => {
 
         <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-sm text-secondary-foreground/60">
-            © {new Date().getFullYear()} Mahavir Tours and Travels. All rights reserved.
+            © {new Date().getFullYear()} Mahavir Taxi. All rights reserved.
           </p>
         </div>
       </div>

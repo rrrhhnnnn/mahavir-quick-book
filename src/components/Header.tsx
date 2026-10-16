@@ -28,13 +28,13 @@ const Header = () => {
         <div className="w-14 h-14 flex items-center justify-center overflow-hidden">
           <img 
             src={logoImg} // Path to your image
-            alt="Mahavir Tours Logo" 
+            alt="Mahavir Taxi Logo" 
             className="w-full h-full object-contain" 
           />
         </div>
         <div>
           <h1 className="text-lg font-display font-bold text-foreground leading-tight">
-            Mahavir Tours
+            Mahavir Taxi
           </h1>
           <p className="text-xs text-muted-foreground -mt-1">& Travels</p>
         </div>

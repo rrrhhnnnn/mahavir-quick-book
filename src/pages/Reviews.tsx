@@ -12,7 +12,7 @@ const featuredReviews = [
     rating: 5,
     date: 'March 2024',
     review:
-      'Excellent service! The driver was punctual, polite and the car was very clean. Booked an Innova for an outstation trip to Ahmedabad — totally smooth experience. Highly recommend Mahavir Tours!',
+      'Excellent service! The driver was punctual, polite and the car was very clean. Booked an Innova for an outstation trip to Ahmedabad — totally smooth experience. Highly recommend Mahavir Taxi!',
     avatar: 'R',
   },
   {
@@ -44,7 +44,7 @@ const featuredReviews = [
     rating: 5,
     date: 'November 2023',
     review:
-      'Mahavir Tours arranged a luxury bus for our company outing. Everything was perfectly organized — on time, clean vehicle, and a very professional driver. Our entire team was impressed!',
+      'Mahavir Taxi arranged a luxury bus for our company outing. Everything was perfectly organized — on time, clean vehicle, and a very professional driver. Our entire team was impressed!',
     avatar: 'D',
   },
   {
@@ -52,7 +52,7 @@ const featuredReviews = [
     rating: 5,
     date: 'October 2023',
     review:
-      'Reliable and trustworthy service. I travel frequently for work and Mahavir Tours is my go-to. Always on time, always courteous. The Innova Crysta is especially comfortable for long trips.',
+      'Reliable and trustworthy service. I travel frequently for work and Mahavir Taxi is my go-to. Always on time, always courteous. The Innova Crysta is especially comfortable for long trips.',
     avatar: 'K',
   },
 ];
@@ -81,10 +81,10 @@ const Reviews = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Customer Reviews - Mahavir Tours and Travels Rajkot</title>
+        <title>Customer Reviews - Mahavir Taxi Rajkot</title>
         <meta
           name="description"
-          content="Read customer reviews for Mahavir Tours and Travels Rajkot. Rated 4.9/5 by 200+ happy travellers. Share your experience on Google!"
+          content="Read customer reviews for Mahavir Taxi Rajkot. Rated 4.9/5 by 200+ happy travellers. Share your experience on Google!"
         />
         <link rel="canonical" href="https://mahavirtravels.com/reviews" />
       </Helmet>
@@ -237,7 +237,7 @@ const Reviews = () => {
             Ready for Your Own Journey?
           </h2>
           <p className="text-secondary-foreground/80 mb-6 max-w-xl mx-auto">
-            Join thousands of happy travellers. Book your ride with Mahavir Tours and Travels today.
+            Join thousands of happy travellers. Book your ride with Mahavir Taxi today.
           </p>
           <a href="/" className="btn-primary inline-flex items-center gap-2">
             Book a Ride Now

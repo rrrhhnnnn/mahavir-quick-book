@@ -55,7 +55,7 @@ const Home = () => {
 
   const whatsappRouteLink = (source: string, destination: string) =>
     `https://wa.me/919173789788?text=${encodeURIComponent(
-      `Hi Mahavir Tours and Travels, I want to book a ride from ${source} to ${destination}.`
+      `Hi Mahavir Taxi, I want to book a ride from ${source} to ${destination}.`
     )}`;
 
   const features = [
@@ -79,8 +79,8 @@ const Home = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Mahavir Tours and Travels - Best Taxi & Cab Service in Rajkot, Gujarat</title>
-        <meta name="description" content="Book reliable taxi & cab services in Rajkot with Mahavir Tours and Travels. Swift, Ertiga, Innova Crysta, Bus & Urbania available 24/7. Call +91 91737 89788." />
+        <title>Mahavir Taxi - Best Taxi & Cab Service in Rajkot, Gujarat</title>
+        <meta name="description" content="Book reliable taxi & cab services in Rajkot with Mahavir Taxi. Swift, Ertiga, Innova Crysta, Bus & Urbania available 24/7. Call +91 91737 89788." />
         <link rel="canonical" href="https://mahavirtravels.in/" />
       </Helmet>
 

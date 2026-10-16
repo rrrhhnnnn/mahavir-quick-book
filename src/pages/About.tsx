@@ -149,10 +149,10 @@ const About = () => {
   return (
     <Layout>
       <Helmet>
-        <title>About Mahavir Tours and Travels - 15+ Years Trusted Taxi Service Rajkot</title>
+        <title>About Mahavir Taxi - 15+ Years Trusted Taxi Service Rajkot</title>
         <meta
           name="description"
-          content="Mahavir Tours and Travels - 15+ years of trusted taxi & travel services in Rajkot, Gujarat. 10,000+ happy customers, 500+ cities covered."
+          content="Mahavir Taxi - 15+ years of trusted taxi & travel services in Rajkot, Gujarat. 10,000+ happy customers, 500+ cities covered."
         />
         <link rel="canonical" href="https://mahavirtravels.in/about" />
       </Helmet>
@@ -196,7 +196,7 @@ const About = () => {
             <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Story</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Founded in 2009, Mahavir Tours and Travels began with a simple mission: to provide
+                Founded in 2009, Mahavir Taxi began with a simple mission: to provide
                 safe, reliable, and comfortable travel experiences across India. What started as a
                 small family business with just two vehicles has now grown into one of the most
                 trusted names in the travel industry.
@@ -209,7 +209,7 @@ const About = () => {
               <p>
                 Today, we continue to uphold the values that have made us successful: integrity,
                 reliability, and a genuine care for our customers' comfort and safety. Whether you
-                need a quick city ride or a cross-country adventure, Mahavir Tours and Travels is
+                need a quick city ride or a cross-country adventure, Mahavir Taxi is
                 here to make your journey memorable.
               </p>
             </div>
