@@ -66,7 +66,7 @@ const BookingForm = () => {
 
     const selectedVehicle = vehicles.find(v => v.value === vehicle);
     const phoneNumber = '+919173789788';
-    const message = `Hi Mahavir Tours and Travels, I want to book a ${selectedVehicle?.label} ride from ${source} to ${destination} on ${format(date, 'PPP')} at ${time}.`;
+    const message = `Hi Mahavir Taxi, I want to book a ${selectedVehicle?.label} ride from ${source} to ${destination} on ${format(date, 'PPP')} at ${time}.`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');

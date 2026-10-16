@@ -43,7 +43,7 @@ const Services = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Our Fleet - Swift, Ertiga, Innova Taxi Hire Rajkot | Mahavir Travels</title>
+        <title>Our Fleet - Swift, Ertiga, Innova Taxi Hire Rajkot | Mahavir Taxi</title>
         <meta name="description" content="Hire Swift, Ertiga, Innova Crysta, Luxury Bus & Urbania in Rajkot. Best rates for outstation, local & airport taxi. Book now!" />
         <link rel="canonical" href="https://mahavirtravels.in/services" />
       </Helmet>
@@ -87,7 +87,7 @@ const Services = () => {
             Contact us for special packages and group bookings.
           </p>
           <a
-            href="https://wa.me/919173789788?text=Hi%20Mahavir%20Tours%20and%20Travels%2C%20I%20need%20a%20custom%20quote."
+            href="https://wa.me/919173789788?text=Hi%20Mahavir%20Taxi%2C%20I%20need%20a%20custom%20quote."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-block"

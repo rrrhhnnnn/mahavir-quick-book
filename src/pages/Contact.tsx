@@ -6,8 +6,8 @@ const Contact = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Contact Mahavir Tours and Travels Rajkot | Call +91 9173789788</title>
-        <meta name="description" content="Contact Mahavir Tours and Travels in Rajkot. Call +91 9173789788, WhatsApp us, or visit our office at Gandhigram, Rajkot for taxi bookings." />
+        <title>Contact Mahavir Taxi Rajkot | Call +91 9173789788</title>
+        <meta name="description" content="Contact Mahavir Taxi in Rajkot. Call +91 9173789788, WhatsApp us, or visit our office at Gandhigram, Rajkot for taxi bookings." />
         <link rel="canonical" href="https://mahavirtravels.in/contact" />
       </Helmet>
 
@@ -47,7 +47,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="https://wa.me/919173789788?text=Hi%20Mahavir%20Tours%20and%20Travels"
+                href="https://wa.me/919173789788?text=Hi%20Mahavir%20Taxi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-elevated flex items-center gap-4 group"
